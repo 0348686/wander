@@ -39,164 +39,166 @@ function scarf () {
                 } else {
                     scarf_next = 2
                 }
-                if (scarf_prev == 0) {
-                    if (scarf_next == 0) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftright2`)
+                if (tiles.tileAtLocationEquals(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`transparency16`)) {
+                    if (scarf_prev == 0) {
+                        if (scarf_next == 0) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftright2`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftright charged`)
+                            }
+                        } else if (scarf_next == 1) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downleft`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downleft charged`)
+                            }
+                        } else if (scarf_next == 2) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend charged`)
+                            }
+                        } else if (scarf_next == 3) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftup0`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftup charged`)
+                            }
                         } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftright charged`)
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend charged`)
+                            }
                         }
-                    } else if (scarf_next == 1) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downleft`)
+                    } else if (scarf_prev == 1) {
+                        if (scarf_next == 0) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upright0`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upright charged`)
+                            }
+                        } else if (scarf_next == 1) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updown2`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updown charged`)
+                            }
+                        } else if (scarf_next == 2) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftup0`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftup charged`)
+                            }
+                        } else if (scarf_next == 3) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend charged`)
+                            }
                         } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downleft charged`)
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend charged`)
+                            }
                         }
-                    } else if (scarf_next == 2) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend`)
+                    } else if (scarf_prev == 2) {
+                        if (scarf_next == 0) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright charged`)
+                            }
+                        } else if (scarf_next == 1) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downright0`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downright charged`)
+                            }
+                        } else if (scarf_next == 2) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftright2`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftright charged`)
+                            }
+                        } else if (scarf_next == 3) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upright0`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upright charged`)
+                            }
                         } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend charged`)
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright charged`)
+                            }
                         }
-                    } else if (scarf_next == 3) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftup0`)
+                    } else if (scarf_prev == 3) {
+                        if (scarf_next == 0) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downright0`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downright charged`)
+                            }
+                        } else if (scarf_next == 1) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown charged`)
+                            }
+                        } else if (scarf_next == 2) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downleft`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downleft charged`)
+                            }
+                        } else if (scarf_next == 3) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updown2`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updown charged`)
+                            }
                         } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftup charged`)
-                        }
-                    } else {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend charged`)
-                        }
-                    }
-                } else if (scarf_prev == 1) {
-                    if (scarf_next == 0) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upright0`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upright charged`)
-                        }
-                    } else if (scarf_next == 1) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updown2`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updown charged`)
-                        }
-                    } else if (scarf_next == 2) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftup0`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftup charged`)
-                        }
-                    } else if (scarf_next == 3) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend charged`)
-                        }
-                    } else {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend charged`)
-                        }
-                    }
-                } else if (scarf_prev == 2) {
-                    if (scarf_next == 0) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright charged`)
-                        }
-                    } else if (scarf_next == 1) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downright0`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downright charged`)
-                        }
-                    } else if (scarf_next == 2) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftright2`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftright charged`)
-                        }
-                    } else if (scarf_next == 3) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upright0`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upright charged`)
-                        }
-                    } else {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright charged`)
-                        }
-                    }
-                } else if (scarf_prev == 3) {
-                    if (scarf_next == 0) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downright0`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downright charged`)
-                        }
-                    } else if (scarf_next == 1) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown charged`)
-                        }
-                    } else if (scarf_next == 2) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downleft`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf downleft charged`)
-                        }
-                    } else if (scarf_next == 3) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updown2`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updown charged`)
-                        }
-                    } else {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown charged`)
-                        }
-                    }
-                } else {
-                    if (scarf_next == 0) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright charged`)
-                        }
-                    } else if (scarf_next == 1) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown charged`)
-                        }
-                    } else if (scarf_next == 2) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend charged`)
-                        }
-                    } else if (scarf_next == 3) {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend`)
-                        } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend charged`)
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown charged`)
+                            }
                         }
                     } else {
-                        if (counter < maxscarf - scarf_charge) {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf none0`)
+                        if (scarf_next == 0) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftendright charged`)
+                            }
+                        } else if (scarf_next == 1) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf upenddown charged`)
+                            }
+                        } else if (scarf_next == 2) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf leftrightend charged`)
+                            }
+                        } else if (scarf_next == 3) {
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf updownend charged`)
+                            }
                         } else {
-                            tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf none charged`)
+                            if (counter < maxscarf - scarf_charge) {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf none0`)
+                            } else {
+                                tiles.setTileAt(tiles.getTileLocation(scarf_positions_x[counter], scarf_positions_y[counter]), assets.tile`scarf none charged`)
+                            }
                         }
                     }
                 }
@@ -229,6 +231,16 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         decrease_scarf_charge()
     }
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`pink hill`, function (sprite, location) {
+    mySprite.vy = -25
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`giant scarf`, function (sprite, location) {
+    scarf_charge = maxscarf
+    tiles.setTileAt(location, assets.tile`giant scarf charged`)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`giant scarf charged`, function (sprite, location) {
+    scarf_charge = maxscarf
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`hole`, function (sprite, location) {
     maxscarf = 1
     scarf_charge = 1
@@ -244,15 +256,14 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`hole`, function (sprite, loca
     vendor = sprites.create(assets.image`vendor`, SpriteKind.Player)
     vendor.setPosition(155, 115)
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`giant scarf`, function (sprite, location) {
-    scarf_charge = maxscarf
-    tiles.setTileAt(location, assets.tile`giant scarf charged`)
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`giant scarf charged`, function (sprite, location) {
-    scarf_charge = maxscarf
-})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`hill`, function (sprite, location) {
     mySprite.vy = -25
+})
+function decrease_scarf_charge () {
+    scarf_charge += -1
+}
+scene.onOverlapTile(SpriteKind.chirp, assets.tile`small scarf`, function (sprite, location) {
+    scarf_charge = maxscarf
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`Scarf upgrade`, function (sprite, location) {
     maxscarf += 1
@@ -261,19 +272,20 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`Scarf upgrade`, function (spr
     scarf_positions_x.push(mySprite.tilemapLocation().column)
     scarf_positions_y.push(mySprite.tilemapLocation().row)
 })
-function decrease_scarf_charge () {
-    scarf_charge += -1
-}
-scene.onOverlapTile(SpriteKind.chirp, assets.tile`small scarf`, function (sprite, location) {
-    scarf_charge = maxscarf
-})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`prayer spot`, function (sprite, location) {
+    scarf_charge = maxscarf
     prayer_spot = sprites.create(assets.image`prayer spot`, SpriteKind.Player)
     prayer_spot.setPosition(location.x, location.y)
     mySprite.follow(prayer_spot, 100)
     pause(500)
     if (level == 1) {
         tiles.setCurrentTilemap(tilemap`level5`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(1, 30.5))
+    } else if (level == 2) {
+        tiles.setCurrentTilemap(tilemap`level9`)
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(1, 30.5))
+    } else if (level == 3) {
+        tiles.setCurrentTilemap(tilemap`level0`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(1, 30.5))
     } else {
         tiles.setCurrentTilemap(tilemap`win`)
